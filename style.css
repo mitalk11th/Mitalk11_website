@@ -543,17 +543,27 @@ th .en, .btn .en, .day-tag .en, .tab-btn .en {
 }
 
 .sponsor-mark {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 12px;
+  width: 100%;
+  height: 130px;
+  margin: 0 auto 14px;
   border-radius: 12px;
-  background: var(--teal-100);
+  background: #fff;
+  border: 1px solid var(--line);
   color: var(--teal-700);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
   font-size: 1.2rem;
+  overflow: hidden;
+}
+
+.sponsor-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  display: block;
 }
 
 /* ---------- CTA banner ---------- */
