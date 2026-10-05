@@ -676,3 +676,132 @@ footer a:hover { opacity: 1; text-decoration: underline; }
 @media (max-width: 860px) {
   .two-col { grid-template-columns: 1fr; }
 }
+
+/* ---------- Short talk competition ---------- */
+.talk-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px;
+  margin-top: 28px;
+}
+
+.talk-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.talk-head h3 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  color: var(--teal-900);
+}
+
+.talk-head p {
+  margin: 0;
+  color: var(--ink-soft);
+  max-width: 560px;
+}
+
+.talk-count {
+  background: var(--teal-100);
+  color: var(--teal-800);
+  border-radius: 16px;
+  padding: 16px 32px;
+  text-align: center;
+}
+
+.talk-count b {
+  display: block;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.talk-count span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.talk-steps {
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px 0 0;
+  padding: 0;
+}
+
+.talk-steps li {
+  counter-increment: step;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px 20px 22px;
+}
+
+.talk-steps li::before {
+  content: counter(step);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: var(--teal-800);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.talk-steps h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--teal-900);
+}
+
+.talk-steps p {
+  margin: 0 0 10px;
+  font-size: 0.93rem;
+  color: var(--ink-soft);
+}
+
+.talk-steps p:last-child { margin-bottom: 0; }
+
+.talk-tag {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--line);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.talk-tag-yes {
+  background: var(--teal-800);
+  color: #fff;
+}
+
+.talk-reminder {
+  margin-top: 20px;
+  padding: 12px 18px;
+  background: #fff7e6;
+  border: 1px solid #f0d68a;
+  border-radius: 10px;
+  color: #6b5310;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 860px) {
+  .talk-card { padding: 24px 20px; }
+  .talk-steps { grid-template-columns: 1fr; }
+}
